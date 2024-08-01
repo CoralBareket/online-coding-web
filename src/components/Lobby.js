@@ -5,7 +5,7 @@ const Lobby = ({ setSelectedCodeBlock }) => {
   const [codeBlocks, setCodeBlocks] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/code-blocks')
+    fetch('https://online-coding-web-production-7629.up.railway.app/code-blocks')
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
