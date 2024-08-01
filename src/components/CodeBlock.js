@@ -16,7 +16,7 @@ function compareStrings(str1, str2) {
   return normalizedStr1 === normalizedStr2;
 }
 
-const socket = io('http://localhost:3000');
+const socket = io('https://online-coding-api-production.up.railway.app');
 
 const CodeBlock = ({ title }) => {
   const [code, setCode] = useState('');
@@ -33,7 +33,7 @@ const CodeBlock = ({ title }) => {
       localStorage.setItem('mentorExists', 'true');
     }
 
-    fetch(`http://localhost:3000/code-block/${title}`)
+    fetch(`https://online-coding-api-production.up.railway.app/code-block/${title}`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
